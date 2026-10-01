@@ -74,7 +74,7 @@ export default function Projects() {
   const list = PROJECTS.filter((p) => filter === 'All' || p.cat === filter);
 
   return (
-    <section id="projects" className="relative py-24 md:py-36 border-t border-white/5">
+    <section id="projects" className="relative py-24 md:py-36 border-t border-white/5 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <SectionHead
           index="03" eyebrow="Some of my recent work"
@@ -84,7 +84,7 @@ export default function Projects() {
         <Reveal>
           <div className="flex flex-wrap gap-2 mb-10">
             {FILTERS.map((f) => (
-              <button key={f} onClick={() => setFilter(f)} className={`px-5 py-2.5 rounded-full font-mono text-[12px] tracking-widest uppercase border transition-all ${filter === f ? 'bg-ice text-black border-ice font-bold' : 'border-white/15 text-zinc-400 hover:border-ice/50 hover:text-white'}`}>
+              <button key={f} onClick={() => setFilter(f)} className={`px-5 py-3 rounded-full font-mono text-[12px] tracking-widest uppercase border transition-all ${filter === f ? 'bg-ice text-black border-ice font-bold' : 'border-white/15 text-zinc-400 hover:border-ice/50 hover:text-white'}`}>
                 {f}
               </button>
             ))}
@@ -105,9 +105,9 @@ export default function Projects() {
               initial={{ opacity: 0, y: 60, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 40, scale: 0.97 }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               onClick={(e) => e.stopPropagation()}
-              className="max-w-2xl w-full rounded-3xl overflow-hidden border border-white/15 bg-panel"
+              className="max-w-2xl w-full max-h-[88vh] overflow-y-auto rounded-3xl border border-white/15 bg-panel"
             >
-              <div className={`relative h-48 bg-gradient-to-br ${active.grad} p-6 flex items-end`}>
+              <div className={`relative h-48 rounded-t-3xl bg-gradient-to-br ${active.grad} p-6 flex items-end`}>
                 <div className="absolute inset-0 opacity-30" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.7) 1px, transparent 0)', backgroundSize: '20px 20px' }} />
                 <button onClick={() => setActive(null)} className="absolute top-4 right-4 w-10 h-10 grid place-items-center rounded-full bg-black/50 border border-white/20 hover:bg-ice hover:text-black transition-colors"><X size={16} /></button>
                 <div className="relative text-6xl">{active.icon}</div>

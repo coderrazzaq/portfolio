@@ -38,7 +38,7 @@ export default function Preloader({ onDone }) {
               </div>
               <div className="text-zinc-600">compiling cinematic modules…</div>
             </div>
-            <div className="font-display font-bold leading-none text-[22vw] md:text-[13rem] text-white tabular-nums">
+            <div className="font-display font-bold leading-none text-[20vw] md:text-[13rem] text-white tabular-nums">
               {count}<span className="text-ice text-[6vw] md:text-5xl align-top">%</span>
             </div>
           </div>

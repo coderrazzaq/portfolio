@@ -69,7 +69,7 @@ export default function Hero({ started }) {
               </span>
             </motion.div>
 
-            <h1 className="font-display font-bold tracking-[-0.04em] leading-[0.9] text-[15.5vw] sm:text-[12vw] lg:text-[8.2rem]">
+            <h1 className="font-display font-bold tracking-[-0.04em] leading-[0.9] text-[14vw] sm:text-[12vw] lg:text-[8.2rem]">
               <span className="block overflow-hidden"><SplitLetters text={PROFILE.first} delay={0.25} /></span>
               <span className="block overflow-hidden">
                 <SplitLetters text={PROFILE.last} delay={0.55} className="text-stroke" />
@@ -87,13 +87,13 @@ export default function Hero({ started }) {
                 </p>
                 <p className="text-zinc-400 mt-3 max-w-xl text-[15px] md:text-base leading-relaxed">{PROFILE.bio}</p>
                 <div className="flex flex-wrap gap-3 mt-7">
-                  <Magnetic>
-                    <a href="#projects" onClick={(e) => { e.preventDefault(); document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' }); }} className="inline-flex items-center gap-2 bg-ice text-black font-semibold px-7 py-3.5 rounded-full text-[15px] hover:shadow-[0_0_40px_rgba(125,211,252,0.4)] transition-shadow">
+                  <Magnetic className="w-full sm:w-auto">
+                    <a href="#projects" onClick={(e) => { e.preventDefault(); document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' }); }} className="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-ice text-black font-semibold px-7 py-3.5 rounded-full text-[15px] hover:shadow-[0_0_40px_rgba(125,211,252,0.4)] transition-shadow">
                       View Projects <ArrowDown size={16} />
                     </a>
                   </Magnetic>
-                  <Magnetic>
-                    <a href="#contact" onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }} className="inline-flex items-center gap-2 glass font-semibold px-7 py-3.5 rounded-full text-[15px] hover:border-ice/50 transition-colors">
+                  <Magnetic className="w-full sm:w-auto">
+                    <a href="#contact" onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }} className="inline-flex w-full sm:w-auto justify-center items-center gap-2 glass font-semibold px-7 py-3.5 rounded-full text-[15px] hover:border-ice/50 transition-colors">
                       Contact Me
                     </a>
                   </Magnetic>
@@ -120,9 +120,9 @@ export default function Hero({ started }) {
                   { k: '16', v: 'Tech skills', icon: Sparkles },
                   { k: '03y', v: 'Building & hacking', icon: ShieldCheck },
                 ].map((s) => (
-                  <div key={s.v} className="glass rounded-2xl p-4 card-shine">
+                  <div key={s.v} className="glass rounded-2xl p-3 sm:p-4 card-shine">
                     <s.icon size={16} className="text-ice mb-2" />
-                    <div className="font-display font-bold text-2xl md:text-3xl">{s.k}</div>
+                    <div className="font-display font-bold text-xl sm:text-2xl md:text-3xl">{s.k}</div>
                     <div className="text-[11px] font-mono uppercase tracking-widest text-zinc-500 mt-1">{s.v}</div>
                   </div>
                 ))}

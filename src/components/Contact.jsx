@@ -19,7 +19,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-24 md:py-36 border-t border-white/5 overflow-hidden">
+    <section id="contact" className="relative py-24 md:py-36 border-t border-white/5 overflow-hidden scroll-mt-20 overflow-x-clip">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-frost/20 blur-[140px]" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[300px] bg-ice/10 blur-[120px]" />
@@ -46,7 +46,7 @@ export default function Contact() {
               ].map((c) => (
                 <Magnetic key={c.k} strength={0.2}>
                   <a href={c.href} target="_blank" rel="noreferrer" className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5 hover:border-ice/50 hover:bg-white/[0.05] transition-colors group">
-                    <span className="w-12 h-12 rounded-xl bg-ice/10 border border-ice/20 grid place-items-center text-ice group-hover:bg-ice group-hover:text-black transition-colors"><c.icon size={19} /></span>
+                    <span className="w-12 h-12 shrink-0 rounded-xl bg-ice/10 border border-ice/20 grid place-items-center text-ice group-hover:bg-ice group-hover:text-black transition-colors"><c.icon size={19} /></span>
                     <span><span className="block font-mono text-[10px] tracking-[0.25em] uppercase text-zinc-500">{c.k}</span><span className="block font-semibold text-[15px] mt-0.5 break-all">{c.v}</span></span>
                     <ArrowUpRight size={16} className="ml-auto text-zinc-600 group-hover:text-ice shrink-0" />
                   </a>

@@ -7,7 +7,7 @@ import { Reveal, SectionHead, Magnetic } from './ui';
 
 export default function About() {
   return (
-    <section id="about" className="relative py-24 md:py-36">
+    <section id="about" className="relative py-24 md:py-36 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <SectionHead
           index="01" eyebrow="Background & Journey"
@@ -24,7 +24,7 @@ export default function About() {
                 <span className="w-3 h-3 rounded-full bg-red-500/80" /><span className="w-3 h-3 rounded-full bg-yellow-500/80" /><span className="w-3 h-3 rounded-full bg-green-500/80" />
                 <span className="ml-3 font-mono text-[11px] text-zinc-500">abdul@portfolio:~</span>
               </div>
-              <div className="relative p-6 md:p-8 font-mono text-[13px] md:text-sm leading-7">
+              <div className="relative p-5 sm:p-6 md:p-8 font-mono text-[12px] sm:text-[13px] md:text-sm leading-7 overflow-x-auto">
                 <div><span className="text-ice">$</span> <span className="text-zinc-400">whoami</span></div>
                 <div className="text-white font-semibold text-lg">Abdul Razzaque Ansari</div>
                 <div className="mt-3 text-zinc-500">{`{`}</div>
@@ -78,13 +78,13 @@ export default function About() {
             </Reveal>
             <Reveal delay={0.24}>
               <div className="flex flex-wrap gap-3 mt-7">
-                <Magnetic>
-                  <a href="mailto:a.razzaq8097@gmail.com" className="inline-flex items-center gap-2 bg-white text-black font-semibold px-6 py-3 rounded-full text-sm hover:bg-ice transition-colors">
+                <Magnetic className="w-full sm:w-auto">
+                  <a href="mailto:a.razzaq8097@gmail.com" className="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-white text-black font-semibold px-6 py-3 rounded-full text-sm hover:bg-ice transition-colors">
                     <Mail size={15} /> a.razzaq8097@gmail.com
                   </a>
                 </Magnetic>
-                <Magnetic>
-                  <a href="/Abdul_Razzaque_Ansari_Resume.pdf" download="Abdul_Razzaque_Ansari_Resume.pdf" className="inline-flex items-center gap-2 border border-white/20 px-6 py-3 rounded-full text-sm font-semibold hover:border-ice hover:text-ice transition-colors">
+                <Magnetic className="w-full sm:w-auto">
+                  <a href="/Abdul_Razzaque_Ansari_Resume.pdf" download="Abdul_Razzaque_Ansari_Resume.pdf" className="inline-flex w-full sm:w-auto justify-center items-center gap-2 border border-white/20 px-6 py-3 rounded-full text-sm font-semibold hover:border-ice hover:text-ice transition-colors">
                     <Download size={15} /> Download Resume
                   </a>
                 </Magnetic>

@@ -64,7 +64,7 @@ export default function Navbar() {
         {open && (
           <motion.div
             initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-[75] bg-void/95 backdrop-blur-2xl pt-28 px-6 md:hidden"
+            className="fixed inset-0 z-[75] bg-void/95 backdrop-blur-2xl pt-28 pb-10 px-6 md:hidden overflow-y-auto"
           >
             {LINKS.map((l, i) => (
               <motion.button
@@ -76,6 +76,15 @@ export default function Navbar() {
                 <span className="font-mono text-xs text-ice">{l.n}</span> {l.label}
               </motion.button>
             ))}
+            <motion.a
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.35 }}
+              href="mailto:a.razzaq8097@gmail.com"
+              className="mt-6 flex items-center justify-center gap-2 bg-ice text-black font-bold px-6 py-4 rounded-2xl"
+            >
+              Hire Me <ArrowUpRight size={16} />
+            </motion.a>
           </motion.div>
         )}
       </AnimatePresence>

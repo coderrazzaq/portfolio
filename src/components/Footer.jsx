@@ -19,9 +19,9 @@ export default function Footer() {
             { icon: LinkedinIcon, href: PROFILE.linkedin },
             { icon: Mail, href: `mailto:${PROFILE.email}` },
           ].map(({ icon: Icon, href }, i) => (
-            <a key={i} href={href} target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-full border border-white/15 text-zinc-400 hover:bg-ice hover:text-black hover:border-ice transition-colors"><Icon size={15} /></a>
+            <a key={i} href={href} target="_blank" rel="noreferrer" className="w-11 h-11 grid place-items-center rounded-full border border-white/15 text-zinc-400 hover:bg-ice hover:text-black hover:border-ice transition-colors"><Icon size={15} /></a>
           ))}
-          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="w-10 h-10 grid place-items-center rounded-full bg-white text-black hover:bg-ice transition-colors ml-1"><ArrowUp size={15} /></button>
+          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="w-11 h-11 grid place-items-center rounded-full bg-white text-black hover:bg-ice transition-colors ml-1"><ArrowUp size={15} /></button>
         </div>
       </div>
       <div className="font-display font-bold text-[18vw] leading-[0.8] text-center text-white/[0.04] select-none -mb-[4vw]">ABDUL</div>

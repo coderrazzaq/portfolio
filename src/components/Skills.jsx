@@ -12,7 +12,7 @@ export default function Skills() {
   const list = SKILLS.filter((s) => cat === 'All' || s.cat === cat);
 
   return (
-    <section id="skills" className="relative py-24 md:py-36 border-t border-white/5">
+    <section id="skills" className="relative py-24 md:py-36 border-t border-white/5 scroll-mt-20 overflow-x-clip">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-frost/15 blur-[130px] pointer-events-none" />
       <div className="max-w-7xl mx-auto px-5 md:px-8 relative">
         <SectionHead
@@ -26,7 +26,7 @@ export default function Skills() {
               <button
                 key={c}
                 onClick={() => setCat(c)}
-                className={`px-5 py-2.5 rounded-full font-mono text-[12px] tracking-widest uppercase border transition-all ${cat === c ? 'bg-ice text-black border-ice font-bold' : 'border-white/15 text-zinc-400 hover:border-ice/50 hover:text-white'}`}
+                className={`px-5 py-3 rounded-full font-mono text-[12px] tracking-widest uppercase border transition-all ${cat === c ? 'bg-ice text-black border-ice font-bold' : 'border-white/15 text-zinc-400 hover:border-ice/50 hover:text-white'}`}
               >
                 {c}
               </button>

@@ -11,7 +11,7 @@ export default function Journey() {
   const scaleY = useSpring(scrollYProgress, { stiffness: 120, damping: 25 });
 
   return (
-    <section id="journey" className="relative py-24 md:py-36 border-t border-white/5 overflow-hidden">
+    <section id="journey" className="relative py-24 md:py-36 border-t border-white/5 overflow-hidden scroll-mt-20 overflow-x-clip">
       <div className="absolute bottom-0 right-0 w-[500px] h-[400px] bg-ice/[0.06] blur-[120px] pointer-events-none" />
       <div className="max-w-5xl mx-auto px-5 md:px-8">
         <SectionHead

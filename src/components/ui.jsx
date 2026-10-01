@@ -19,7 +19,7 @@ export function Reveal({ children, delay = 0, y = 36, className = '' }) {
   );
 }
 
-export function Magnetic({ children, strength = 0.35 }) {
+export function Magnetic({ children, strength = 0.35, className = '' }) {
   const ref = useRef(null);
   const [pos, setPos] = useState({ x: 0, y: 0 });
   return (
@@ -36,7 +36,7 @@ export function Magnetic({ children, strength = 0.35 }) {
         });
       }}
       onMouseLeave={() => setPos({ x: 0, y: 0 })}
-      className="inline-block"
+      className={`inline-block ${className}`}
     >
       {children}
     </motion.div>
